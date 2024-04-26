@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 from tkinter.ttk import Progressbar
 from docx2pdf import convert
-import fitz  # PyMuPDF
+import fitz
 import os
 from PIL import Image
 
