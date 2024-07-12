@@ -1,4 +1,4 @@
-wwwwwwwwwwwwwwwwwwAttribute VB_Name = "Módulo1"
+Attribute VB_Name = "Módulo1"
 Function CONVERTIRNUM(Numero As Double, Optional CentimosEnLetra As Boolean) As String
 
 Dim Moneda As String
@@ -8,7 +8,7 @@ Dim Centimos As String
 Dim Preposicion As String
 Dim NumCentimos As Double
 Dim Letra As String
-Const Maximo = 1999999999.99
+Const Maximo = 1999999999.99thor
 
 '************************************************************
 ' Parámetros
