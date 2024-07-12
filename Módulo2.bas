@@ -1,3 +1,3 @@
-Sub ww()
-    MsgBox "¡Hola, mundo!"
+Sub thor()
+    MsgBox "hello"
 End Sub
