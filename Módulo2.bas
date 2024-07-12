@@ -3,7 +3,7 @@ Sub PedirPIN()
     Dim pinCorrecto As String
     
     ' Define el PIN correcto
-    pinCorrecto = "987@"  ' Puedes cambiar esto por el PIN que desees
+    pinCorrecto = "987"  ' Puedes cambiar esto por el PIN que desees
     
     ' Solicita al usuario que ingrese el PIN
     pinIngresado = InputBox("Ingrese el PIN:", "Verificacion de PIN")
