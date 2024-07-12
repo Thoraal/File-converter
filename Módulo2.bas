@@ -1,7 +1,7 @@
 Sub PedirPIN()
     Dim pinIngresado As String
     Dim pinCorrecto As String
-    
+    'esta es una prueba-------------------------------------------------------------------------------
     ' Define el PIN correcto
     pinCorrecto = "987"  ' Puedes cambiar esto por el PIN que desees
     
