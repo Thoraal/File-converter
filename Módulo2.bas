@@ -6,7 +6,7 @@ Sub PedirPIN()
     pinCorrecto = "987@"  ' Puedes cambiar esto por el PIN que desees
     
     ' Solicita al usuario que ingrese el PIN
-    pinIngresado = InputBox("Ingrese el PIN:", "Verificación de PIN")
+    pinIngresado = InputBox("Ingrese el PIN:", "Verificacion de PIN")
     
     ' Compara el PIN ingresado con el PIN correcto
     If pinIngresado = pinCorrecto Then
