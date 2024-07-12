@@ -1,4 +1,4 @@
-Attribute VB_Name = "Módulo1"
+wwwwwwwwwwwwwwwwwwAttribute VB_Name = "MÃ³dulo1"
 Function CONVERTIRNUM(Numero As Double, Optional CentimosEnLetra As Boolean) As String
 
 Dim Moneda As String
@@ -11,16 +11,16 @@ Dim Letra As String
 Const Maximo = 1999999999.99
 
 '************************************************************
-' Parámetros
+' ParÃ¡metros
 '************************************************************
 Moneda = "Peso"         'Nombre de Moneda (Singular)
 Monedas = "Pesos"       'Nombre de Moneda (Plural)
-Centimo = "Centavo"     'Nombre de Céntimos (Singular)
-Centimos = "Centavos"   'Nombre de Céntimos (Plural)
-Preposicion = "Con"     'Preposición entre Moneda y Céntimos
+Centimo = "Centavo"     'Nombre de CÃ©ntimos (Singular)
+Centimos = "Centavos"   'Nombre de CÃ©ntimos (Plural)
+Preposicion = "Con"     'PreposiciÃ³n entre Moneda y CÃ©ntimos
 '************************************************************
 
-'Validar que el Numero está dentro de los límites
+'Validar que el Numero estÃ¡ dentro de los lÃ­mites
 If (Numero >= 0) And (Numero <= Maximo) Then
 
     
@@ -37,11 +37,11 @@ If (Numero >= 0) And (Numero <= Maximo) Then
     
     NumCentimos = Round((Numero - Fix(Numero)) * 100)   'Obtener los centimos del Numero
     
-    'Si NumCentimos es mayor a cero inicar la conversión
+    'Si NumCentimos es mayor a cero inicar la conversiÃ³n
     If NumCentimos >= 0 Then
-        'Si el parámetro CentimosEnLetra es VERDADERO obtener letras para los céntimos
+        'Si el parÃ¡metro CentimosEnLetra es VERDADERO obtener letras para los cÃ©ntimos
         If CentimosEnLetra Then
-            Letra = Letra & " " & Preposicion & " " & NUMERORECURSIVO(Fix(NumCentimos)) 'Convertir los céntimos en letra
+            Letra = Letra & " " & Preposicion & " " & NUMERORECURSIVO(Fix(NumCentimos)) 'Convertir los cÃ©ntimos en letra
                 
             'Si NumCentimos = 1 agregar leyenda Centimos (Singular)
             If (NumCentimos = 1) Then
@@ -50,7 +50,7 @@ If (Numero >= 0) And (Numero <= Maximo) Then
             Else
                 Letra = Letra & " " & Centimos
             End If
-         'De lo contrario mostrar los céntimos como número
+         'De lo contrario mostrar los cÃ©ntimos como nÃºmero
          Else
             If NumCentimos < 10 Then
                 Letra = Letra & " 0" & NumCentimos & "/100"
@@ -60,12 +60,12 @@ If (Numero >= 0) And (Numero <= Maximo) Then
          End If
     End If
 
-    'Regresar el resultado final de la conversión
+    'Regresar el resultado final de la conversiÃ³n
     CONVERTIRNUM = Letra
 
 Else
-    'Si el Numero no está dentro de los límites, entivar un mensaje de error
-    CONVERTIRNUM = "ERROR: El número excede los límites."
+    'Si el Numero no estÃ¡ dentro de los lÃ­mites, entivar un mensaje de error
+    CONVERTIRNUM = "ERROR: El nÃºmero excede los lÃ­mites."
 End If
 
 End Function
@@ -76,9 +76,9 @@ Dim Unidades, Decenas, Centenas
 Dim Resultado As String
 
 '**************************************************
-' Nombre de los números
+' Nombre de los nÃºmeros
 '**************************************************
-Unidades = Array("", "Un", "Dos", "Tres", "Cuatro", "Cinco", "Seis", "Siete", "Ocho", "Nueve", "Diez", "Once", "Doce", "Trece", "Catorce", "Quince", "Dieciséis", "Diecisiete", "Dieciocho", "Diecinueve", "Veinte", "Veintiuno", "Veintidos", "Veintitres", "Veinticuatro", "Veinticinco", "Veintiseis", "Veintisiete", "Veintiocho", "Veintinueve")
+Unidades = Array("", "Un", "Dos", "Tres", "Cuatro", "Cinco", "Seis", "Siete", "Ocho", "Nueve", "Diez", "Once", "Doce", "Trece", "Catorce", "Quince", "DiecisÃ©is", "Diecisiete", "Dieciocho", "Diecinueve", "Veinte", "Veintiuno", "Veintidos", "Veintitres", "Veinticuatro", "Veinticinco", "Veintiseis", "Veintisiete", "Veintiocho", "Veintinueve")
 Decenas = Array("", "Diez", "Veinte", "Treinta", "Cuarenta", "Cincuenta", "Sesenta", "Setenta", "Ochenta", "Noventa", "Cien")
 Centenas = Array("", "Ciento", "Doscientos", "Trescientos", "Cuatrocientos", "Quinientos", "Seiscientos", "Setecientos", "Ochocientos", "Novecientos")
 '**************************************************
@@ -97,7 +97,7 @@ Select Case Numero
     Case 2000 To 999999
         Resultado = NUMERORECURSIVO(Numero \ 1000) + " Mil" + IIf(Numero Mod 1000 <> 0, " " + NUMERORECURSIVO(Numero Mod 1000), "")
     Case 1000000 To 1999999
-        Resultado = "Un Millón" + IIf(Numero Mod 1000000 <> 0, " " + NUMERORECURSIVO(Numero Mod 1000000), "")
+        Resultado = "Un MillÃ³n" + IIf(Numero Mod 1000000 <> 0, " " + NUMERORECURSIVO(Numero Mod 1000000), "")
     Case 2000000 To 1999999999
         Resultado = NUMERORECURSIVO(Numero \ 1000000) + " Millones" + IIf(Numero Mod 1000000 <> 0, " " + NUMERORECURSIVO(Numero Mod 1000000), "")
 End Select
