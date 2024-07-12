@@ -1,3 +1,3 @@
 Sub thor()
-    MsgBox "hello"
+    MsgBox "prueba"
 End Sub
